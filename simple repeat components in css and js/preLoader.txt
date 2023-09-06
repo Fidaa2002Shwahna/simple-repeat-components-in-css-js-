@@ -1,0 +1,41 @@
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+
+
+
+/* preloader */
+#preloader {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#preloader .loader {
+  width: 60px;
+  height: 60px;
+  background: url(https://icons8.com/preloaders/img/ajax-loader-preview.png) center center no-repeat;
+  background-size: contain;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* preloader */
+
+
+// preloader
+window.addEventListener("load", function() {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+});

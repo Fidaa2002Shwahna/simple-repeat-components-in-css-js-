@@ -1,0 +1,73 @@
+/* how to add an increasing line under element */
+ 
+(element query selector)::after {
+    content: "";
+    background-color: var(--main-color);
+    color: #ff702a;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease; /* Added transition property */
+  }
+  
+  (element query selector):hover::after {
+    width: 45px;
+  }
+
+  /* how to add an increasing line under element */
+
+
+
+
+
+/* change color of header links when hover on it */
+.links a:hover {
+  color: var(--backGround);
+  cursor: pointer;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+/* change color of header links when hover on it */
+
+/* two diffrent content card when i hover the other side appear*/
+.main {
+  width: 600px;
+  position: relative;
+}
+
+.main .second {
+  width: 100px;
+  background-color: red;
+  height: 100px;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+}
+
+.main .first {
+  width: 100px;
+  background-color: green;
+  height: 100px;
+  position: absolute;
+
+}
+
+.main:hover .second {
+opacity: 1;
+z-index: 100;
+}
+/* two diffrent content card when i hover the other side appear*/
+
+
+
+
